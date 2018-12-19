@@ -1,0 +1,11 @@
+- babel有三种使用方式：单体文件， 命令行， 构建工具的插件
+- babel总共分为三个阶段：解析，转换，生成
+- babel本身没有任何转换功能，他把转行功能一个个都分解到了plugin里， 因此当我们不配置任何插件时，经过 babel 的代码和输入是相同的。
+- preset代表的时候一个插件的集合
+- 官方preset有env, react, flow, minify 
+- 执行顺序，Plugin 会运行在 Preset 之前， Plugin 会从前到后顺序执行， Preset 的顺序则 刚好相反(从后向前)
+- babel-polyfill 会污染全局变量，给很多类的原型链上都作了修改，并且打包出来体积大
+- babel-plugin-transform-runtime 依赖 babel-runtime
+- babel-plugin-transform-runtime不会污染全局变量，会将依赖的东西单独引入
+- babel-plugin-transform-runtime 不支持 实例方法 (例如 [1,2,3].includes(1))
+- babel7 preset 的变更：淘汰 es201x，删除 stage-x，强推 env (重点)
