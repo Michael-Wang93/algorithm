@@ -7,5 +7,5 @@
 - babel-polyfill 会污染全局变量，给很多类的原型链上都作了修改，并且打包出来体积大
 - babel-plugin-transform-runtime 依赖 babel-runtime
 - babel-plugin-transform-runtime不会污染全局变量，会将依赖的东西单独引入
-- babel-plugin-transform-runtime 不支持 实例方法 (例如 [1,2,3].includes(1))
+- babel-plugin-transform-runtime 不支持 实例方法 (例如 [1,2,3].includes(1))， 如果用了一些新的实例方法，还是要用babel-polyfill的
 - babel7 preset 的变更：淘汰 es201x，删除 stage-x，强推 env (重点)
