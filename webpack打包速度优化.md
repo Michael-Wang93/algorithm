@@ -1,0 +1,6 @@
+- 减少文件的搜索范围： 配置resolve.modules， 设置 test & include & exclude
+- 增强代码压缩工具： UglifyJS采用单线程压缩， 推荐采用 webpack-parallel-uglify-plugin 可以进行多线程压缩， 充分利用cpu的资源
+- 用 Happypack 来加速代码构建
+- 设置 babel 的 cacheDirectory 为true
+- 设置 noParse
+- 拷贝静态文件

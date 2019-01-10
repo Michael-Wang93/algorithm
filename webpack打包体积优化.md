@@ -1,0 +1,10 @@
+- 定位 webpack 大的原因:  webpack-bundle-analyzer
+- 提取公共模块
+- 引入 DllPlugin 和 DllReferencePlugin 其中原理是，将特定的第三方NPM包模块提前构建
+- 外部引入模块(CDN): 比如项目开发中常用到的 moment, lodash等，都是挺大的存在，如果必须引入的话，即考虑外部引入之，再借助 externals 予以指定， webpack可以处理使之不参与打包
+- 移除不必要的文件(IgnorePlugin)
+- 模块化引入，尽量使用模块化引入
+- 尽可能引入更合适的包
+- 按需异步加载模块 
+- 开启Gzip压缩
+- 压缩混淆代码

@@ -2,7 +2,7 @@ const instanceOf = (construct) => {
     let sub = this.__proto__;
     let prototype = construct.prototype;
     while(true) {
-        if(left === null) {
+        if(sub === null) {
             return false;
         }
         if(sub = prototype) {
